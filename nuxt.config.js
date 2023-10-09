@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-nuxt-for-shop',
+    title: 'online-shop',
     htmlAttrs: {
       lang: 'en'
     },
