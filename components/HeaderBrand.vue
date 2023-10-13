@@ -4,10 +4,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-    }
-  }
 }
 </script>
 
@@ -21,5 +17,13 @@ export default {
   margin: 11px 23.79px 12.9px 6.21px;
   -webkit-text-stroke: 0.3px black;
   font-family: 'Inter';
+}
+@media screen and (max-width: 879px) {
+  .header__brand {
+    width: 59.55px;
+    height: 15.5px;
+    font-size: 18px;
+    margin: 9.39px 18.39px 10.1px 4.81px;
+  }
 }
 </style>

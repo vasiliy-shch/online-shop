@@ -12,10 +12,6 @@ export default {
   components: {
     HeaderBrand,
     HeaderImage
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
@@ -27,5 +23,12 @@ export default {
     margin: 20px 0px 20px 131px;
     display: flex;
 
+}
+@media screen and (max-width: 879px) {
+  .header__logo {
+    width: 116px;
+    height: 36px;
+    margin: 10px 0 10px 18px;
+  }
 }
 </style>
