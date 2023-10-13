@@ -1,7 +1,7 @@
 <template>
     <div class="header__logo">
-    <HeaderImage/>
-    <HeaderBrand/>
+        <HeaderImage/>
+        <HeaderBrand/>
     </div>
 </template>
 
