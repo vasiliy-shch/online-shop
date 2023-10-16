@@ -2,11 +2,6 @@
     <div class="header__image"></div>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style>
 .header__image {
     width: 44px;

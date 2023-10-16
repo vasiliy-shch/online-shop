@@ -2,11 +2,6 @@
     <div class="header__brand">Brand</div>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style>
 .header__brand {
   font-size: 24px;
