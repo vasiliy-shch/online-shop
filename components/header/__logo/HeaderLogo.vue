@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderBrand from '../components/HeaderBrand.vue'
-import HeaderImage from '../components/HeaderImage.vue'
+import HeaderBrand from '../../../components/header/__logo/HeaderBrand'
+import HeaderImage from '../../../components/header/__logo/HeaderImage'
 export default {
   components: {
     HeaderBrand,
