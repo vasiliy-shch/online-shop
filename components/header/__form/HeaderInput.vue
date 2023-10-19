@@ -7,12 +7,12 @@
 
 <style>
 .header__input {
-    width: 406px;
-    height: 19px;
+    width: 420px;
+    height: 18px;
     font-size: 16px;
     font-style: 'Inter';
     border: 0;
-    padding: 11px 5px 10px 10px;
+    padding: 10px 5px 10px 10px;
     outline: none;
     border-radius: 6px 0 0 6px;
 }

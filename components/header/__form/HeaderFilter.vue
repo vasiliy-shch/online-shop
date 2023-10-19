@@ -17,7 +17,7 @@ export default {
       categorys: [
         {
           id: 1,
-          name: 'all category'
+          name: 'All category'
         },
         {
           id: 2,
@@ -51,15 +51,24 @@ export default {
 
 <style>
 .header__filter {
+    font-size: 16px;
     width: 145px;
-    height: 40px;
+    height: 39px;
     outline: none;
     border: none;
     border-left: 1px solid #0D6EFD;
     background-color: white;
-    padding: 11px 5px 10px 10px;
+    padding: 10px 7px 10px 7px;
+    letter-spacing:0.02em;
+    appearance: none;
+    background-image: url(../../../images/apperance.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 8px);
+    background-position-y: calc(100% - 8px);
 }
 .header__category {
+    width: 140px;
+    height: 19px;
     cursor: pointer;
     font-size: 16px;
 }

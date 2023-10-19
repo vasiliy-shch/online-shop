@@ -4,8 +4,8 @@
 
 <style>
 .header__button {
-    width: 100px;
-    height: 40px;
+    width: 105px;
+    height: 39px;
     background-color: #0D6EFD;
     color: white;
     font-size: 16px;
