@@ -18,10 +18,14 @@
 }
 @media screen and (max-width: 879px) {
     .header__input {
-        padding: 11px 68px 10px 6px;
+        padding: 11px 39px 10px 36px;
         background-color: #EFF2F4;
-        width: 226px;
-        border-radius: 0 6px 6px 0;
+        width: 225px;
+        font-size: 12px;
+        background-image: url(../../../images/searchGrey.svg);
+        background-repeat: no-repeat;
+        background-position: bottom 9px left 8px;
+        background-size: 22px 22px;
     }
 }
 </style>

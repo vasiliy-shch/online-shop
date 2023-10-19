@@ -20,15 +20,9 @@
 }
 @media screen and (max-width: 879px) {
     .header__button {
-        width: 22px;
-        height: 22px;
-        background-color: #EFF2F4;
-        color: none;
-        margin: 9px 0 9px 8px;
-        border: none;
-        font-size: 0;
-        background-image: url(../../../images/search.svg);
-        opacity: 0.4;
+        width: 100px;
+        height: 39px;
+        font-size: 12px;
     }
 }
 </style>

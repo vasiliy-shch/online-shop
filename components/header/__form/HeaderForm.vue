@@ -31,7 +31,6 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .header__form {
-    flex-direction: row-reverse;
     width: 330px;
     border: 1px solid #8B96A5;
     background-color: #EFF2F4;
