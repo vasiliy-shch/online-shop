@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderBrand from '../components/HeaderBrand.vue'
-import HeaderImage from '../components/HeaderImage.vue'
+import HeaderBrand from '~/components/header/logo/HeaderBrand'
+import HeaderImage from '~/components/header/logo/HeaderImage'
 export default {
   components: {
     HeaderBrand,
@@ -22,7 +22,6 @@ export default {
     height: 46px;
     margin: 20px 0px 20px 131px;
     display: flex;
-
 }
 @media screen and (max-width: 879px) {
   .header__logo {
