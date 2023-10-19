@@ -8,7 +8,7 @@
 
 <script>
 import HeaderInput from '~/components/header/form/HeaderInput.vue'
-import HeaderFilter from '@/components/header/form/HeaderFilter.vue'
+import HeaderFilter from '~/components/header/form/HeaderFilter.vue'
 import HeaderButton from '~/components/header/form/HeaderButton.vue'
 export default {
   components: {
