@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import HeaderInput from '../../../components/header/__form/HeaderInput'
-import HeaderFilter from '../__form/HeaderFilter.vue'
-import HeaderButton from '../__form/HeaderButton.vue'
+import HeaderInput from '~/components/header/form/HeaderInput.vue'
+import HeaderFilter from '@/components/header/form/HeaderFilter.vue'
+import HeaderButton from '~/components/header/form/HeaderButton.vue'
 export default {
   components: {
     HeaderInput,

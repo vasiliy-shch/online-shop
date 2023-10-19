@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HeaderShop from '../components/header/HeaderShop.vue'
+import HeaderShop from '~/components/header/HeaderShop.vue'
 export default {
   components: {
     HeaderShop

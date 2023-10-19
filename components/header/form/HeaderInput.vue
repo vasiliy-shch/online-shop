@@ -10,7 +10,6 @@
     width: 420px;
     height: 18px;
     font-size: 16px;
-    font-style: 'Inter';
     border: 0;
     padding: 10px 5px 10px 10px;
     outline: none;
@@ -22,7 +21,7 @@
         background-color: #EFF2F4;
         width: 225px;
         font-size: 12px;
-        background-image: url(../../../images/searchGrey.svg);
+        background-image: url(~/images/searchGrey.svg);
         background-repeat: no-repeat;
         background-position: bottom 9px left 8px;
         background-size: 22px 22px;

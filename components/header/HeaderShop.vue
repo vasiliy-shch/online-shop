@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderLogo from '../../components/header/__logo/HeaderLogo'
-import HeaderForm from '../../components/header/__form/HeaderForm'
+import HeaderLogo from '~/components/header/logo/HeaderLogo'
+import HeaderForm from '~/components/header/form/HeaderForm'
 export default {
   components: {
     HeaderLogo,
