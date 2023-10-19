@@ -27,6 +27,7 @@ export default {
     margin: 22px 90px 24px 45px;
     border: 1px solid #0D6EFD;
     border-radius: 6px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25)
 }
 @media screen and (max-width: 879px) {
   .header__form {
