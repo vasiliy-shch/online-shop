@@ -41,7 +41,7 @@ export default {
         },
         {
           id: 7,
-          name: 'sports and outdoor'
+          name: 'sports'
         }
       ]
     }

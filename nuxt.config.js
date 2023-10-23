@@ -15,7 +15,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        as: 'style',
+        rel: 'stylesheet preload prefetch',
+        href: '/static/fonts_family/Inter-Font.css',
+      },
     ]
   },
 
