@@ -61,7 +61,7 @@ export default {
 <style>
 .header__links {
     display: flex;
-    width: 586px;
+    width: 611px;
     height: 24px;
     margin: 16px 0;
 }
@@ -73,6 +73,7 @@ export default {
     text-align: center;
     line-height: 22px;
     font-family: "Inter";
+    font-weight: 400;
 }
 .header__links_link:hover {
     opacity: 0.6;
@@ -83,7 +84,7 @@ export default {
 .header__links_help {
     width: 61px;
     text-align: left;
-    background-image: url(~/images/apperance.svg);
+    background-image: url(~/assets/images/apperance.svg);
     background-repeat: no-repeat;
     background-size: 24px 24px;
     background-position-x: 33px;

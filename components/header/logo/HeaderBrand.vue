@@ -4,11 +4,13 @@
 
 <style>
 .header__brand {
-  font-size: 30px;
+  font-family: 'Inter';
+  font-weight: 900;
+  font-size: 28px;
   width: 80px;
   height: 22px;
   color: #8CB7F5;
-  font-style: bold;
+  font-style: normal;
   padding: 11px 23.79px 12.9px 5.21px;
   -webkit-text-stroke: 0.3px black;
 }
