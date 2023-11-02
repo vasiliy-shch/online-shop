@@ -112,7 +112,7 @@ export default {
 
 <style>
 .header__languages {
-    width: 126px;
+    width: 132px;
     margin-left: 270px;
     font-size: 16px;
     font-family: 'Inter';
@@ -122,7 +122,7 @@ export default {
 .header__language {
   display: flex;
   align-items: center;
-  width: 126px;
+  width: 132px;
   height: 24px;
   margin: 16px 0;
 }

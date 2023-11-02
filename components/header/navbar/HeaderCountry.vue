@@ -121,7 +121,6 @@ export default {
         if (country.id === id) {
           country.styles = 'ship__country_selected'
           country.selected = true
-          console.log(country.id)
           this.selectedImg = country.url
           this.isEdit = false
         } else {
@@ -138,7 +137,7 @@ export default {
 <style>
 .header__ship_country {
   width: 115px;
-  margin-left: 32px;
+  margin-left: 26px;
 }
 .ship__country_list {
   border: 1px solid #EFF2F4;
