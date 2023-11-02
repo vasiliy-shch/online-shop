@@ -9,7 +9,7 @@
     margin: 1px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(~/assets/images/you_can_toucan_yes_you_can_sticker_icon_249883.svg);
+    background-image: url(~/images/you_can_toucan_yes_you_can_sticker_icon_249883.svg);
 }
 @media screen and (max-width: 879px) {
   .header__image {

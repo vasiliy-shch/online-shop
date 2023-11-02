@@ -9,7 +9,7 @@
     background-color: #0D6EFD;
     color: white;
     font-size: 16px;
-    font-family: 'Inter';
+    font-style: 'Inter';
     padding: 0;
     border: none;
     border-radius: 0px 5px 5px 0;

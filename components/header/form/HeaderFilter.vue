@@ -51,7 +51,6 @@ export default {
 
 <style>
 .header__filter {
-    font-family: 'Inter';
     font-size: 16px;
     width: 145px;
     height: 39px;
@@ -60,8 +59,9 @@ export default {
     border-left: 1px solid #0D6EFD;
     background-color: white;
     padding: 10px 7px 10px 7px;
+    letter-spacing:0.02em;
     appearance: none;
-    background-image: url('~/assets/images/apperance.svg');
+    background-image: url('~/images/apperance.svg');
     background-repeat: no-repeat;
     background-position-x: calc(100% - 8px);
     background-position-y: calc(100% - 8px);

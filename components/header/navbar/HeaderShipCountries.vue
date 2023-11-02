@@ -1,16 +1,10 @@
 <template>
-    <div class="header__ship">
-    <h2 class="header__ship_title"> Ship to </h2>
-        <select class="header__ship_select">
-            <option
-            v-for="country in countries"
-            :key="country.id"
-            :class="country.style"
-            :url="country.url"
-            >
-             {{ country.name }}
-            </option>
-        </select>
+    <div>
+      <div
+      v-for="country in countries"
+      :key="country.id">
+        <img :src="country.url">
+      </div>
     </div>
 </template>
 
@@ -70,26 +64,5 @@ export default {
 </script>
 
 <style>
-.header__ship {
-    margin: 16px 0 16px 32px;
-    width: 115px;
-    height: 24px;
-    font-size: 16px;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
 
-}
-.header__ship_title {
-    font-size: 16px;
-    font-weight: normal;
-}
-.header__ship_select {
-    width: 55px;
-    height: 24px;
-}
-.russia {
-    background-image: url(~/images/flags/ru.svg);
-    background-size: 22px 16px;
-}
 </style>

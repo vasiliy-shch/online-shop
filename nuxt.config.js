@@ -16,6 +16,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        as: 'style',
+        rel: 'stylesheet preload prefetch',
+        href: '/static/fonts_family/Inter-Font.css',
+      },
     ]
   },
 

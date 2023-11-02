@@ -1,110 +1,51 @@
 <template>
-  <div class="header__languages">
-    <div v-if="!isEdit">
-      <div class="header__language">
-        <p
-        class="header__language_title"
-        @click="show"
-        >
-          {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
-        <button class="header__language_button"></button>
-        </p>
-      </div>
-    </div>
-    <div v-else-if="isEdit">
-      <div class="header__language">
-      <p
-      class="header__language_title"
-      @click="hide">
-        {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
-      <button class="header__language_button"></button>
-      </p>
-      </div>
-      <div class="header__language_list">
-      <div
-        v-for="language in languages"
-        :key="language.id"
-        :id="language.id"
-        :class='[language.styles, "header__languageInList"]'
-        @click="select(language.id)"
-      >
-      <p class="header__languageInList_title">
+  <select class="header__languages">
+    <option
+    class="header__language"
+    v-for="language in languages"
+    :key="language.id"
+    >
         {{ language.name }}, {{ language.currency }}
-      </p>
-      </div>
-      </div>
-    </div>
-  </div>
+    </option>
+  </select>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      isEdit: false,
-      selectedLanguage: {
-        name: 'Russian',
-        currency: 'RUB'
-      },
       languages: [
         {
           id: 1,
           name: 'English',
-          currency: 'USD',
-          styles: ''
+          currency: 'USD'
         },
         {
           id: 2,
           name: 'Russian',
-          currency: 'RUB',
-          styles: 'header__language_selected'
+          currency: 'RUB'
         },
         {
           id: 3,
           name: 'German',
-          currency: 'EU',
-          styles: ''
+          currency: 'EU'
         },
         {
           id: 4,
           name: 'Chinese',
-          currency: 'CNY',
-          styles: ''
+          currency: 'CNY'
         },
         {
           id: 5,
           name: 'Indian',
-          currency: 'INR',
-          styles: ''
+          currency: 'INR'
         },
         {
           id: 6,
           name: 'English',
-          currency: 'GBP',
-          styles: ''
+          currency: 'GBP'
         }
       ]
-    }
-  },
-  methods: {
-    show () {
-      this.isEdit = true
-    },
-    hide () {
-      this.isEdit = false
-    },
-    select (id) {
-      this.languages = this.languages.map((language) => {
-        if (language.id === id) {
-          language.styles = 'header__language_selected'
-          this.selectedLanguage.name = language.name
-          this.selectedLanguage.currency = language.currency
-          this.isEdit = false
-        } else {
-          language.styles = ''
-        }
-        return language
-      })
     }
   }
 }
@@ -112,53 +53,19 @@ export default {
 
 <style>
 .header__languages {
-    width: 126px;
-    margin-left: 270px;
-    font-size: 16px;
-    font-family: 'Inter';
-    display: flex;
-    cursor: pointer;
+    width: 124px;
+    margin-left: 300px;
+    font-size: 16;
+    border: 0;
+    background-color: white;
+    outline: none;
+    appearance: none;
+    background-image: url(~/images/apperance.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 96px 50%;
 }
 .header__language {
-  display: flex;
-  align-items: center;
-  width: 126px;
-  height: 24px;
-  margin: 16px 0;
-}
-.header__language_title {
     font-size: 16px;
-    display: flex;
-}
-.header__language_title:hover {
-  opacity: 0.6;
-}
-.header__language_list {
-  border: 1px solid #EFF2F4;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
-}
-.header__languageInList {
-  height: 36px;
-  display: flex;
-  justify-content: flex-start;
-}
-.header__languageInList_title {
-  margin: 8px 0 8px 8px;
-}
-.header__language_selected {
-  color: #0D6EFD;
-}
-.header__languageInList:hover {
-  background-color: #E5F1FF;
-}
-.header__language_button {
-  background-color: white;
-  border: none;
-  background-image: url(~/assets/images/apperance.svg);
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  margin-left: 2px;
-  cursor: pointer;
 }
 </style>
