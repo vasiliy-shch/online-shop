@@ -3,35 +3,35 @@
     <div v-if="!isEdit">
       <div class="header__language">
         <p
-        class="header__language_title"
-        @click="show"
+          class="header__language_title"
+          @click="show"
         >
           {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
-        <button class="header__language_button"></button>
+          <button class="header__language_button"></button>
         </p>
       </div>
     </div>
     <div v-else-if="isEdit">
       <div class="header__language">
-      <p
-      class="header__language_title"
-      @click="hide">
-        {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
-      <button class="header__language_button"></button>
-      </p>
+        <p
+          class="header__language_title"
+          @click="hide">
+            {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
+            <button class="header__language_button"></button>
+        </p>
       </div>
       <div class="header__language_list">
-      <div
-        v-for="language in languages"
-        :key="language.id"
-        :id="language.id"
-        :class='[language.styles, "header__languageInList"]'
-        @click="select(language.id)"
-      >
-      <p class="header__languageInList_title">
-        {{ language.name }}, {{ language.currency }}
-      </p>
-      </div>
+        <div
+          v-for="language in languages"
+          :key="language.id"
+          :id="language.id"
+          :class='[language.styles, "header__languageInList"]'
+          @click="select(language.id)"
+        >
+          <p class="header__languageInList_title">
+            {{ language.name }}, {{ language.currency }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

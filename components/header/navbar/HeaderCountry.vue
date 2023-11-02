@@ -21,8 +21,10 @@
             :class='["ship__country", country.styles]'
             @click="select(country.id)"
             >
-          <p class="ship__country_titleInList">{{ country.name }}</p>
-          <img class="ship__country_image" :src=country.url>
+              <p class="ship__country_titleInList">
+                {{ country.name }}
+              </p>
+              <img class="ship__country_image" :src=country.url>
           </div>
         </div>
     </div>
