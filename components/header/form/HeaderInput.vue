@@ -7,6 +7,8 @@
 
 <style>
 .header__input {
+    font-family: 'Inter';
+    font-weight: 400;
     width: 420px;
     height: 18px;
     font-size: 16px;
@@ -21,7 +23,7 @@
         background-color: #EFF2F4;
         width: 225px;
         font-size: 12px;
-        background-image: url(~/images/searchGrey.svg);
+        background-image: url(~/assets/images/searchGrey.svg);
         background-repeat: no-repeat;
         background-position: bottom 9px left 8px;
         background-size: 22px 22px;
