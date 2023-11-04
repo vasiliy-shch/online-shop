@@ -1,29 +1,34 @@
 <template>
 <div class="header__ship_country">
     <div v-if="!isEdit">
-        <h1 @click="show" class="ship__country_title">
+        <div @click="show" class="ship__country_title">
           Ship to
-          <img class="ship__country_image" :src="this.selectedImg">
+          <img class="ship__country_image"
+            :src="selectedCountry.url"
+          >
           <button class="ship__country_button"></button>
-        </h1>
+        </div>
     </div>
     <div v-else-if="isEdit">
-        <h1 @click="hide" class="ship__country_title">
+        <div @click="hide" class="ship__country_title">
           Ship to
-          <img class="ship__country_image" :src="this.selectedImg">
-          <button class="ship__country_button"></button>
-        </h1>
+          <img class="ship__country_image"
+            :src="selectedCountry.url"
+          >
+          <div class="ship__country_button"></div>
+        </div>
         <div class="ship__country_list">
           <div
             v-for="country in countries"
-            :id="country.id"
             :key="country.id"
-            :class='["ship__country", country.styles]'
-            @click="select(country.id)"
+            :class="[ 'ship__country',
+              selectedCountry.id === country.id ?
+              'ship__country_selected' : '' ]"
+            @click="select(country)"
             >
-              <p class="ship__country_titleInList">
+              <span class="ship__country_titleInList">
                 {{ country.name }}
-              </p>
+              </span>
               <img class="ship__country_image" :src=country.url>
           </div>
         </div>
@@ -36,79 +41,72 @@ export default {
   data () {
     return {
       isEdit: false,
+      selectedCountry: {
+        id: 1,
+        url: require('~/assets/images/flags/ru.svg')
+      },
       countries: [
         {
           id: 1,
           name: 'Russia',
           styles: 'ship__country_selected',
-          url: require('~/assets/images/flags/ru.svg'),
-          selected: false
+          url: require('~/assets/images/flags/ru.svg')
         },
         {
           id: 2,
           name: 'US of America',
           styles: '',
-          url: require('~/assets/images/flags/us.svg'),
-          selected: false
+          url: require('~/assets/images/flags/us.svg')
         },
         {
           id: 3,
           name: 'Italia',
           styles: '',
-          url: require('~/assets/images/flags/it.svg'),
-          selected: false
+          url: require('~/assets/images/flags/it.svg')
         },
         {
           id: 4,
           name: 'Germany',
           styles: '',
-          url: require('~/assets/images/flags/ge.svg'),
-          selected: false
+          url: require('~/assets/images/flags/ge.svg')
         },
         {
           id: 5,
           name: 'Great Britain',
           styles: '',
-          url: require('~/assets/images/flags/gb.svg'),
-          selected: false
+          url: require('~/assets/images/flags/gb.svg')
         },
         {
           id: 6,
           name: 'France',
           styles: '',
-          url: require('~/assets/images/flags/fr.svg'),
-          selected: false
+          url: require('~/assets/images/flags/fr.svg')
         },
         {
           id: 7,
           name: 'Denmark',
           styles: '',
-          url: require('~/assets/images/flags/dk.svg'),
-          selected: false
+          url: require('~/assets/images/flags/dk.svg')
         },
         {
           id: 8,
           name: 'China',
           styles: '',
-          url: require('~/assets/images/flags/cn.svg'),
-          selected: false
+          url: require('~/assets/images/flags/cn.svg')
         },
         {
           id: 9,
           name: 'Australia',
           styles: '',
-          url: require('~/assets/images/flags/au.svg'),
-          selected: false
+          url: require('~/assets/images/flags/au.svg')
         },
         {
           id: 10,
           name: 'United Emirates',
           styles: 'ship__country_borderBottom',
-          url: require('~/assets/images/flags/ae.svg'),
-          selected: false
+          url: require('~/assets/images/flags/ae.svg')
         }
-      ],
-      selectedImg: require('~/assets/images/flags/ru.svg')
+      ]
     }
   },
   methods: {
@@ -118,19 +116,9 @@ export default {
     hide () {
       this.isEdit = false
     },
-    select (id) {
-      this.countries = this.countries.map((country) => {
-        if (country.id === id) {
-          country.styles = 'ship__country_selected'
-          country.selected = true
-          this.selectedImg = country.url
-          this.isEdit = false
-        } else {
-          country.styles = ''
-          country.selected = false
-        }
-        return country
-      })
+    select (country) {
+      this.selectedCountry = country
+      this.isEdit = false
     }
   }
 }

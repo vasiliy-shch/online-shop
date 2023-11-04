@@ -2,35 +2,36 @@
   <div class="header__languages">
     <div v-if="!isEdit">
       <div class="header__language">
-        <p
+        <div
           class="header__language_title"
           @click="show"
         >
           {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
           <button class="header__language_button"></button>
-        </p>
+        </div>
       </div>
     </div>
     <div v-else-if="isEdit">
       <div class="header__language">
-        <p
+        <div
           class="header__language_title"
           @click="hide">
             {{ selectedLanguage.name }}, {{ selectedLanguage.currency }}
-            <button class="header__language_button"></button>
-        </p>
+            <div class="header__language_button"></div>
+        </div>
       </div>
       <div class="header__language_list">
         <div
           v-for="language in languages"
           :key="language.id"
-          :id="language.id"
-          :class='[language.styles, "header__languageInList"]'
-          @click="select(language.id)"
+          :class="['header__languageInList',
+            selectedLanguage.id === language.id ?
+            'header__language_selected' : '' ]"
+          @click="select(language)"
         >
-          <p class="header__languageInList_title">
+          <span class="header__languageInList_title">
             {{ language.name }}, {{ language.currency }}
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -43,6 +44,7 @@ export default {
     return {
       isEdit: false,
       selectedLanguage: {
+        id: 2,
         name: 'Russian',
         currency: 'RUB'
       },
@@ -57,7 +59,7 @@ export default {
           id: 2,
           name: 'Russian',
           currency: 'RUB',
-          styles: 'header__language_selected'
+          styles: ''
         },
         {
           id: 3,
@@ -93,18 +95,9 @@ export default {
     hide () {
       this.isEdit = false
     },
-    select (id) {
-      this.languages = this.languages.map((language) => {
-        if (language.id === id) {
-          language.styles = 'header__language_selected'
-          this.selectedLanguage.name = language.name
-          this.selectedLanguage.currency = language.currency
-          this.isEdit = false
-        } else {
-          language.styles = ''
-        }
-        return language
-      })
+    select (language) {
+      this.selectedLanguage = language
+      this.isEdit = false
     }
   }
 }
