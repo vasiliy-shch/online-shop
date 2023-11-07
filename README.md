@@ -1,2 +1,3 @@
-# online-shop
-This is project for Online shop
+# online-shop on Nuxt, Vue, Axios and Swiper
+
+This is web-site for online shop
