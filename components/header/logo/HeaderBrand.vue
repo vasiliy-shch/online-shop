@@ -18,7 +18,7 @@
   .header__brand {
     width: 59.55px;
     height: 16.51px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 9.39px 18.39px 10.1px 4.81px;
     margin: 0;
 

@@ -16,4 +16,13 @@ export default {
 
 <style>
 @import '~/assets/css/fonts_family/Inter-Font.css';
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 879px){
+  .main-wrapper {
+    max-width: 100%;
+  }
+}
 </style>

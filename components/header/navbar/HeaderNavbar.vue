@@ -1,9 +1,9 @@
 <template>
   <div class="header__navbar">
     <HeaderMenuButton/>
-    <HeaderLinks/>
-    <HeaderLanguages/>
-    <HeaderCountry/>
+    <HeaderLinks class="mobile__display_none"/>
+    <HeaderLanguages class="mobile__display_none"/>
+    <HeaderCountry class="mobile__display_none"/>
   </div>
 </template>
 
@@ -25,5 +25,10 @@ export default {
 <style>
 .header__navbar {
     display: flex;
+}
+@media screen and (max-width: 879px) {
+  .mobile__display_none {
+      display: none;
+  }
 }
 </style>

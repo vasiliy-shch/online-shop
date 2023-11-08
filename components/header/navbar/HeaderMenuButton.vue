@@ -18,4 +18,9 @@
 .header__menuButton:hover {
     opacity: 0.6;
 }
+@media screen and (max-width: 879px) {
+  .header__menuButton {
+    margin: 15px 0 17px 16px;
+  }
+}
 </style>
