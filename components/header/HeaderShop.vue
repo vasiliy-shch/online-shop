@@ -2,9 +2,9 @@
   <div class="header">
     <div class="header__main">
       <div class="header__main_mobile">
-      <HeaderMenuButton class="desktop__display_none"/>
-      <HeaderLogo/>
-      <HeaderActionIcons class="desktop__display_none"/>
+        <HeaderMenuButton class="desktop__display_none"/>
+        <HeaderLogo/>
+        <HeaderActionIcons class="desktop__display_none"/>
       </div>
       <HeaderForm/>
       <HeaderActionIcons class="mobile__display_none"/>

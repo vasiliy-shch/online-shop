@@ -23,7 +23,6 @@ export default {
     margin: 20px 0px 20px 130px;
     display: flex;
     align-items: center;
-
 }
 @media screen and (max-width: 879px) {
   .header__logo {

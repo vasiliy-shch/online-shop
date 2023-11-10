@@ -21,10 +21,6 @@
     </div>
 </template>
 
-<script>
-
-</script>
-
 <style>
 .header__actionIcons {
     display: flex;
