@@ -1,10 +1,15 @@
 <template>
   <div class="header">
     <div class="header__main">
-      <HeaderLogo/>
+      <div class="header__main_mobile">
+        <HeaderMenuButton class="desktop__display_none"/>
+        <HeaderLogo/>
+        <HeaderActionIcons class="desktop__display_none"/>
+      </div>
       <HeaderForm/>
+      <HeaderActionIcons class="mobile__display_none"/>
     </div>
-    <div class="header__rest">
+    <div class="header__rest mobile__display_none">
       <HeaderNavbar/>
     </div>
   </div>
@@ -13,17 +18,21 @@
 <script>
 import HeaderLogo from '~/components/header/logo/HeaderLogo'
 import HeaderForm from '~/components/header/form/HeaderForm'
+import HeaderActionIcons from '~/components/header/actionIcons/HeaderActionIcons.vue'
 import HeaderNavbar from '~/components/header/navbar/HeaderNavbar.vue'
+import HeaderMenuButton from '~/components/header/navbar/HeaderMenuButton.vue'
 export default {
   components: {
     HeaderLogo,
     HeaderForm,
-    HeaderNavbar
+    HeaderActionIcons,
+    HeaderNavbar,
+    HeaderMenuButton
   }
 }
 </script>
 
-<style>
+<style scoped>
 .header {
   max-width: 1440px;
   margin: 0 auto;
@@ -40,7 +49,9 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .header__main {
-  display: block;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
   }
 }
 .header__rest {
@@ -48,5 +59,21 @@ export default {
   height: 56px;
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
+}
+@media screen and (max-width: 879px) {
+  .mobile__display_none {
+    display: none;
+  }
+}
+@media screen and (min-width: 880px) {
+  .desktop__display_none {
+    display: none;
+  }
+}
+@media screen and (max-width: 879px) {
+  .header__main_mobile {
+    display: flex;
+    width: 360px;
+  }
 }
 </style>
