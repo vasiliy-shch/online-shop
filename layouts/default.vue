@@ -1,15 +1,18 @@
 <template>
   <div class="main-wrapper">
     <HeaderShop/>
+    <FooterShop/>
     <slot/>
   </div>
 </template>
 
 <script>
 import HeaderShop from '~/components/header/HeaderShop.vue'
+import FooterShop from '~/components/footer/FooterShop.vue'
 export default {
   components: {
-    HeaderShop
+    HeaderShop,
+    FooterShop
   }
 }
 </script>
