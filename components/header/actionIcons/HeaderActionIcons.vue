@@ -27,7 +27,7 @@
     width: 228px;
     height: 41px;
     margin-top: 25px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 @media screen and (max-width: 879px) {
     .header__actionIcons {
