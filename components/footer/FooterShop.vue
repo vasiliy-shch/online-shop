@@ -9,7 +9,7 @@
         </p>
         <SocialIcons/>
       </div>
-        <FooterMoreUseSection/>
+      <FooterMoreUseSection/>
     </div>
     <div class="footer__rest">
       <div class="footer__rest_contentBox">
