@@ -3,7 +3,9 @@
     <div v-if="!isEdit">
       <div class="footer__language" @click = "show">
         <img class="footer__language_image" :src="selectedLanguage.url">
-        <span class="footer__language_title"> {{ selectedLanguage.name }}</span>
+        <span class="footer__language_title">
+          {{ selectedLanguage.name }}
+        </span>
         <div class="footer__languages_button"></div>
       </div>
     </div>
@@ -23,7 +25,9 @@
       </div>
       <div class="footer__language" @click="hide">
         <img class="footer__language_image" :src="selectedLanguage.url">
-        <span class="footer__language_title"> {{ selectedLanguage.name }}</span>
+        <span class="footer__language_title">
+          {{ selectedLanguage.name }}
+        </span>
         <div class="footer__languages_button"></div>
       </div>
     </div>
@@ -155,6 +159,8 @@ background-repeat: no-repeat;
   border: 1px solid #EFF2F4;
   box-shadow: 0 -4px 4px rgba(0,0,0,0.25);
   margin-bottom: 24px;
+  z-index: 1;
+  background-color: white;
 }
 .footer__language_inList {
   display: flex;
