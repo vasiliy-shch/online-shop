@@ -1,12 +1,6 @@
 <template>
-  <div></div>
+  <div>123, рыба, туда, сюда</div>
 </template>
-
-<script>
-export default {
-  name: 'IndexPage'
-}
-</script>
 
 <style>
 body {

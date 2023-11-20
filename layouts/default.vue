@@ -1,8 +1,8 @@
 <template>
   <div class="main-wrapper">
     <HeaderShop/>
-    <FooterShop/>
     <slot/>
+    <FooterShop/>
   </div>
 </template>
 
