@@ -142,6 +142,10 @@ background-repeat: no-repeat;
   display: flex;
   height: 24px;
   align-items: center;
+  cursor: pointer;
+}
+.footer__language:hover {
+  opacity: 0.8;
 }
 .footer__language_title {
   color: #606060;
@@ -166,6 +170,7 @@ background-repeat: no-repeat;
   display: flex;
   padding-top: 5px;
   font-size: 16px;
+  cursor: pointer;
 }
 .footer__language_inList:hover {
   background-color: #E5F1FF;

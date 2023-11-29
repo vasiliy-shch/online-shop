@@ -38,7 +38,6 @@ export default {
 <style>
 .footer {
   height: 324px;
-  margin-top: 100px;
 }
 @media screen and (max-width: 879px) {
   .footer {
