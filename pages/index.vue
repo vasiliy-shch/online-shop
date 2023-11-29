@@ -1277,7 +1277,7 @@ body {
 .extraServices__cardImage {
   background-color: #1C1C1C;
   height: 120px;
-  width: 280px;
+  max-width: 280px;
   border-radius: 6px 6px 0 0;
   cursor: pointer;
 }
