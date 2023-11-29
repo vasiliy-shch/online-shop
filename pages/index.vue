@@ -1315,7 +1315,7 @@ body {
 }
 .suppliers {
   width: 1180px;
-  margin: 30px auto 0;
+  margin: 30px auto 46px;
   display: flex;
   flex-direction: column;
   font-family: 'Inter'
