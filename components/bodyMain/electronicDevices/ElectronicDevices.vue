@@ -1,7 +1,7 @@
 <template>
   <section class="homeOutdoor">
     <div class="homeOutdoor__banner gadgetsBackground">
-      <h3 class="homeOutdoor__bannerTitle">Home and outdoor</h3>
+      <h3 class="homeOutdoor__bannerTitle electronicsBanner__title">Consumer electronics and gadgets</h3>
       <button class="homeOutdoor__bannerButton">
         <a class="homeOutdoor__bannerButton_text" href="#">Source now</a>
       </button>
@@ -90,3 +90,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.electronicsBanner__title {
+  width: 154px;
+}
+</style>
