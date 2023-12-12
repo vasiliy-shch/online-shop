@@ -45,7 +45,7 @@ export default {
 }
 .header__main {
     display: flex;
-    height: 86px;
+    height: 96px;
 }
 @media screen and (max-width: 879px) {
   .header__main {

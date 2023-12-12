@@ -114,11 +114,24 @@ export default {
   font-family: 'Inter';
   flex-direction: column;
 }
+@media screen and (max-width: 879px) {
+  .recommendedItems {
+    width: 360px;
+    height: auto;
+    margin: 20px 10px 0;
+  }
+}
 .recommendedItems__title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
   margin: 0;
+}
+@media screen and (max-width: 879px) {
+  .recommendedItems__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .recommendedItems__cards {
   margin-top: 24px;
@@ -127,6 +140,15 @@ export default {
   grid-template-rows: repeat(2, 310px);
   column-gap: 20px;
   row-gap: 20px;
+}
+@media screen and (max-width: 879px){
+  .recommendedItems__cards {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 165px);
+    grid-template-rows: repeat(2, 240px);
+    grid-auto-rows: 240px;
+    gap: 8px;
+  }
 }
 .recommendedItems__card {
   background-color: white;
@@ -144,11 +166,23 @@ export default {
   margin: 9px 10px 0 10px;
   cursor: pointer;
 }
+@media screen and (max-width: 879px) {
+  .recommendedItems__cardImage {
+    width: 152px;
+    height: 152px;
+    margin: 6px 7px 0 6px;
+  }
+}
 .recommendedItems__cardTitle {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   margin: 14px 0 0 16px;
+}
+@media screen and (max-width: 879px) {
+  .recommendedItems__cardTitle {
+    margin: 11px 0 0 12px;
+  }
 }
 .recommendedItems__cardSubtitle {
   text-align: left;
@@ -158,5 +192,12 @@ export default {
   color: #8B96A5;
   font-size: 16px;
   line-height: 24px;
+}
+@media screen and (max-width: 879px) {
+  .recommendedItems__cardSubtitle {
+    font-size: 13px;
+    line-height: 17px;
+    margin: 1.76px 0 0 10px;
+  }
 }
 </style>

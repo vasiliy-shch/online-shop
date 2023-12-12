@@ -6,20 +6,28 @@
         <a class="homeOutdoor__bannerButton_text" href="#">Source now</a>
       </button>
     </div>
-    <a
-      v-for="card in deviceCards"
-      :key="card.id"
-      :class="['homeOutdoor__card', card.id > 4 ?
-        'homeOutdoor__card_borderTop' : '']"
-    >
-      <div class="homeOutdoor__textBlock">
-        <h3 class="homeOutdoor__cardTitle">{{ card.name }}</h3>
-        <span class="homeOutdoor__cardSubtitle">
-          <span> from </span>
-          <span> USD {{ card.price }}</span>
-        </span>
-      </div>
-      <img class="homeOutdoor__cardImage" :src="card.image">
+    <div class="homeOutdoor__cards">
+      <a
+        v-for="card in deviceCards"
+        :key="card.id"
+        :class="['homeOutdoor__card', card.id > 4 ?
+          'homeOutdoor__card_borderTop' : '']"
+      >
+        <div class="homeOutdoor__textBlock">
+          <h3 class="homeOutdoor__cardTitle">{{ card.name }}</h3>
+          <span class="homeOutdoor__cardSubtitle">
+            <span> from&nbsp; </span>
+            <span> USD {{ card.price }}</span>
+          </span>
+        </div>
+        <img class="homeOutdoor__cardImage" :src="card.image">
+      </a>
+    </div>
+    <a class="homeOutdoor__mobileLink" href="#">
+      <button class="homeOutdoor__mobileLink_button">
+        Source now
+        <img class="homeOutdoor__mobileLink_buttonImage" src="~/assets/images/bodyMain/blueArrowRight.svg">
+      </button>
     </a>
   </section>
 </template>

@@ -20,6 +20,11 @@
   align-items: center;
   background-color: #EFF2F4;
 }
+@media screen and (max-width: 879px) {
+  .subscribeForm {
+    display: none;
+  }
+}
 .subscribeForm__title {
   margin: 38px 0 0 0;
   font-size: 20px;

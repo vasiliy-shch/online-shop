@@ -123,10 +123,23 @@ export default {
   border: 1px solid #E0E0E0;
   border-radius: 6px;
 }
+@media screen and (max-width: 879px) {
+  .bigBanner {
+    width: 360px;
+    height: 180px;
+    margin: 17px auto 0;
+    border: none;
+  }
+}
 .bigBanner__menuBlock {
   width: 250px;
   height: 360px;
   margin: 20px 0 20px 14px;
+}
+@media screen and (max-width: 879px) {
+  .bigBanner__menuBlock {
+    display: none;
+  }
 }
 .bigBanner__menuItem {
   display: flex;
@@ -156,6 +169,14 @@ export default {
   background-image: url(~/assets/images/bodyMain/bigBanner.svg);
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 879px) {
+  .bigBanner__bannerImage {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-size: 100%;
+  }
+}
 .bigBanner__subtitle {
   margin: 53px 0 0 46px;
   font-family: 'Inter';
@@ -164,6 +185,13 @@ export default {
   line-height: 34px;
   font-weight: 400;
 }
+@media screen and (max-width: 879px) {
+  .bigBanner__subtitle {
+    margin: 24px 0 0 22px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 .bigBanner__title {
   margin: 0 0 0 45px;
   font-family: 'Inter';
@@ -171,6 +199,13 @@ export default {
   color: #1C1C1C;
   line-height: 39px;
   font-weight: 500;
+}
+@media screen and (max-width: 879px) {
+  .bigBanner__title {
+    margin: 0 0 0 22px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .bigBanner__button {
   margin: 17px 0 0 46px;
@@ -185,6 +220,13 @@ export default {
 .bigBanner__button:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 879px) {
+  .bigBanner__button {
+    width: 91px;
+    height: 30px;
+    margin: 18px 0 0 22px;
+  }
+}
 .bigBanner__buttonTitle {
   text-decoration: none;
   color: black;
@@ -192,8 +234,20 @@ export default {
   font-size: 16px;
   font-weight: 400;
 }
+@media screen and (max-width: 879px) {
+  .bigBanner__buttonTitle {
+    font-size: 13px;
+    line-height: 16px;
+    color: #0D6EFD;
+  }
+}
 .bigBanner__formsBlock {
   margin: 20px;
+}
+@media screen and (max-width: 879px) {
+  .bigBanner__formsBlock {
+    display: none;
+  }
 }
 .bigBanner__userForm {
   display: flex;

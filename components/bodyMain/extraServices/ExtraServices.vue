@@ -75,6 +75,11 @@ export default {
   margin: 30px auto 0;
   font-family: 'Inter';
 }
+@media screen and (max-width: 879px) {
+  .extraServices {
+    display: none;
+  }
+}
 .extraServices__title {
   font-size: 24px;
   line-height: 32px;

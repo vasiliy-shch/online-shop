@@ -83,7 +83,7 @@ export default {
           href: 'shopname.co.uk',
           image: require('~/assets/images/flags/gb.svg')
         }
-      ] 
+      ]
     }
   }
 }
@@ -96,6 +96,11 @@ export default {
   display: flex;
   flex-direction: column;
   font-family: 'Inter'
+}
+@media screen and (max-width: 879px) {
+  .suppliers {
+    display: none;
+  }
 }
 .suppliers__title {
   margin: 0;
