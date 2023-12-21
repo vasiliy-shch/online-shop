@@ -125,7 +125,7 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .bigBanner {
-    width: 360px;
+    width: 100%;
     height: 180px;
     margin: 17px auto 0;
     border: none;

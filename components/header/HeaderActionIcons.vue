@@ -35,7 +35,7 @@
         height: 24px;
         justify-content: space-between;
         flex-direction: row-reverse;
-        margin: 16px 0 16px 102px;
+        margin: 16px 16px 16px 102px;
     }
 }
 .actionIcon__button {

@@ -116,7 +116,7 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .recommendedItems {
-    width: 360px;
+    width: 100%;
     height: auto;
     margin: 20px 10px 0;
   }
@@ -144,10 +144,21 @@ export default {
 @media screen and (max-width: 879px){
   .recommendedItems__cards {
     margin-top: 10px;
-    grid-template-columns: repeat(2, 165px);
+    grid-template-columns: repeat(4, 165px);
     grid-template-rows: repeat(2, 240px);
     grid-auto-rows: 240px;
     gap: 8px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width:710px) {
+  .recommendedItems__cards {
+    grid-template-columns: repeat(3, 165px);
+  }
+}
+@media screen and (max-width: 535px) {
+  .recommendedItems__cards {
+    grid-template-columns: repeat(2, 165px);
   }
 }
 .recommendedItems__card {

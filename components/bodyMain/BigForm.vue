@@ -129,7 +129,7 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .bigForm {
-    width: 360px;
+    width: 100%;
     height: 150px;
     margin-top: 10px;
     background-size: cover;

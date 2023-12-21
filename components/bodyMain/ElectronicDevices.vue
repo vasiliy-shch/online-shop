@@ -1,32 +1,32 @@
 <template>
-  <section class="homeOutdoor">
-    <div class="homeOutdoor__banner gadgetsBackground">
-      <h3 class="homeOutdoor__bannerTitle electronicsBanner__title">Consumer electronics and gadgets</h3>
-      <button class="homeOutdoor__bannerButton">
-        <a class="homeOutdoor__bannerButton_text" href="#">Source now</a>
+  <section class="invitingBlock">
+    <div class="invitingBlock__banner gadgetsBackground">
+      <h3 class="invitingBlock__bannerTitle electronicsBanner__title">Consumer electronics and gadgets</h3>
+      <button class="invitingBlock__bannerButton">
+        <a class="invitingBlock__bannerButton_text" href="#">Source now</a>
       </button>
     </div>
-    <div class="homeOutdoor__cards">
+    <div class="invitingBlock__cards">
       <a
         v-for="card in deviceCards"
         :key="card.id"
-        :class="['homeOutdoor__card', card.id > 4 ?
-          'homeOutdoor__card_borderTop' : '']"
+        :class="['invitingBlock__card', card.id > 4 ?
+          'invitingBlock__card_borderTop' : '']"
       >
-        <div class="homeOutdoor__textBlock">
-          <h3 class="homeOutdoor__cardTitle">{{ card.name }}</h3>
-          <span class="homeOutdoor__cardSubtitle">
+        <div class="invitingBlock__textBlock">
+          <h3 class="invitingBlock__cardTitle">{{ card.name }}</h3>
+          <span class="invitingBlock__cardSubtitle">
             <span> from&nbsp; </span>
             <span> USD {{ card.price }}</span>
           </span>
         </div>
-        <img class="homeOutdoor__cardImage" :src="card.image">
+        <img class="invitingBlock__cardImage" :src="card.image">
       </a>
     </div>
-    <a class="homeOutdoor__mobileLink" href="#">
-      <button class="homeOutdoor__mobileLink_button">
+    <a class="invitingBlock__mobileLink" href="#">
+      <button class="invitingBlock__mobileLink_button">
         Source now
-        <img class="homeOutdoor__mobileLink_buttonImage" src="~/assets/images/bodyMain/blueArrowRight.svg">
+        <img class="invitingBlock__mobileLink_buttonImage" src="~/assets/images/bodyMain/blueArrowRight.svg">
       </button>
     </a>
   </section>
