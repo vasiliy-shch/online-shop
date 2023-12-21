@@ -1,14 +1,5 @@
 <template>
   <section class="fairSales">
-    <swiper
-    :slides-per-view="3"
-    :space-between="50"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    ...
-  </swiper>
     <div class="fairSales__calendar">
       <div class="fairSales__calendarTextBlock">
         <h3 class="fairSales__title"> Deals and offers </h3>
@@ -29,10 +20,6 @@
       </div>
   </section>
 </template>
-
-<script setup>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper"
-</script>
 
 <script>
 import FairSalesCounter from '~/components/bodyMain/FairSalesCounter.vue'
@@ -85,7 +72,6 @@ export default {
 </script>
 
 <style>
-@import 'swiper/css';
 .fairSales {
   width: 1180px;
   height: 240px;

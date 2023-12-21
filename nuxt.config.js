@@ -1,9 +1,10 @@
-export default {
+import { defineNuxtConfig } from 'nuxt/config';
+export default defineNuxtConfig ({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
+  meta: {
     title: 'my-nuxt-for-shop',
     htmlAttrs: {
       lang: 'en'
@@ -28,18 +29,19 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
+    '@pinia/nuxt'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,4 +53,4 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-}
+})
