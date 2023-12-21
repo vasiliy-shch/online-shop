@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import FooterLogo from '~/components/footer/logoSection/logo/FooterLogo.vue'
-import SocialIcons from '~/components/footer/logoSection/SocialIcons.vue'
-import FooterMoreUseSection from '~/components/footer/moreUseSection/FooterMoreUseSection.vue'
-import FooterLanguages from '~/components/footer/footerRest/FooterLanguages.vue'
+import FooterLogo from '~/components/footer/FooterLogo.vue'
+import SocialIcons from '~/components/footer/SocialIcons.vue'
+import FooterMoreUseSection from '~/components/footer/FooterMoreUseSection.vue'
+import FooterLanguages from '~/components/footer/FooterLanguages.vue'
 export default {
   components: {
     FooterLogo,
@@ -38,7 +38,6 @@ export default {
 <style>
 .footer {
   height: 324px;
-  margin-top: 100px;
 }
 @media screen and (max-width: 879px) {
   .footer {

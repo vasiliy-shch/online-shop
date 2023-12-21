@@ -2,8 +2,10 @@
   <div class="header">
     <div class="header__main">
       <div class="header__main_mobile">
-        <HeaderMenuButton class="desktop__display_none"/>
-        <HeaderLogo/>
+        <div class="header__main_mobileLogoMenu">
+          <HeaderMenuButton class="desktop__display_none"/>
+          <HeaderLogo/>
+        </div>
         <HeaderActionIcons class="desktop__display_none"/>
       </div>
       <HeaderForm/>
@@ -18,7 +20,7 @@
 <script>
 import HeaderLogo from '~/components/header/logo/HeaderLogo'
 import HeaderForm from '~/components/header/form/HeaderForm'
-import HeaderActionIcons from '~/components/header/actionIcons/HeaderActionIcons.vue'
+import HeaderActionIcons from '~/components/header/HeaderActionIcons.vue'
 import HeaderNavbar from '~/components/header/navbar/HeaderNavbar.vue'
 import HeaderMenuButton from '~/components/header/navbar/HeaderMenuButton.vue'
 export default {
@@ -39,17 +41,16 @@ export default {
 }
 @media screen and (max-width: 879) {
   .header {
-    width: 360px;
+    width: 100%;
     margin: 0 auto;
   }
 }
 .header__main {
     display: flex;
-    height: 86px;
+    height: 96px;
 }
 @media screen and (max-width: 879px) {
   .header__main {
-    align-items: center;
     flex-direction: column;
     display: flex;
   }
@@ -73,7 +74,13 @@ export default {
 @media screen and (max-width: 879px) {
   .header__main_mobile {
     display: flex;
-    width: 360px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 879px) {
+  .header__main_mobileLogoMenu {
+    display: flex;
   }
 }
 </style>

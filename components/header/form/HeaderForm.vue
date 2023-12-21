@@ -22,7 +22,7 @@ export default {
 <style>
 .header__form {
     display: flex;
-    width: 664px;
+    max-width: 664px;
     height: 39px;
     margin: 22px 90px 24px 45px;
     border: 1px solid #0D6EFD;
@@ -31,10 +31,12 @@ export default {
 }
 @media screen and (max-width: 879px) {
   .header__form {
-    width: 330px;
+    min-width: 330px;
+    max-width: 100%;
     border: 1px solid #8B96A5;
     background-color: #EFF2F4;
     margin: 0 15px;
+    justify-content: space-between;
   }
 }
 </style>

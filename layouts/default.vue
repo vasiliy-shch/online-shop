@@ -1,8 +1,8 @@
 <template>
   <div class="main-wrapper">
     <HeaderShop/>
+    <Nuxt/>
     <FooterShop/>
-    <slot/>
   </div>
 </template>
 
@@ -23,9 +23,9 @@ export default {
   max-width: 1440px;
   margin: 0 auto;
 }
-@media screen and (max-width: 879px){
+@media screen and (max-width: 1279px){
   .main-wrapper {
-    max-width: 100%;
+    width: 100%;
   }
 }
 </style>

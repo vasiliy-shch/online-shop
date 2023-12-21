@@ -9,7 +9,7 @@
 .header__input {
     font-family: 'Inter';
     font-weight: 400;
-    width: 420px;
+    max-width: 420px;
     height: 18px;
     font-size: 16px;
     border: 0;
