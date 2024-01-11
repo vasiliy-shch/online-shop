@@ -19,6 +19,16 @@
 </template>
 
 <script>
+import russiaFlag from '~/assets/images/flags/ru.svg'
+import usaFlag from '~/assets/images/flags/us.svg'
+import italiaFlag from '~/assets/images/flags/it.svg'
+import germanyFlag from '~/assets/images/flags/ge.svg'
+import greatBritainFlag from '~/assets/images/flags/gb.svg'
+import franceFlag from '~/assets/images/flags/fr.svg'
+import denmarkFlag from '~/assets/images/flags/dk.svg'
+import cninaFlag from '~/assets/images/flags/cn.svg'
+import australiaFlag from '~/assets/images/flags/au.svg'
+import emiratesFlag from '~/assets/images/flags/ae.svg'
 export default {
   data () {
     return {
@@ -27,61 +37,61 @@ export default {
           id: 1,
           name: 'Arabic Emirates',
           href: 'shopname.ae',
-          image: require('~/assets/images/flags/ae.svg')
+          image: emiratesFlag
         },
         {
           id: 2,
           name: 'Australia',
           href: 'shopname.au',
-          image: require('~/assets/images/flags/au.svg')
+          image: australiaFlag
         },
         {
           id: 3,
           name: 'Unated States',
           href: 'shopname.us',
-          image: require('~/assets/images/flags/us.svg')
+          image: usaFlag
         },
         {
           id: 4,
           name: 'Russia',
           href: 'shopname.ru',
-          image: require('~/assets/images/flags/ru.svg')
+          image: russiaFlag
         },
         {
           id: 5,
           name: 'Italy',
           href: 'shopname.it',
-          image: require('~/assets/images/flags/it.svg')
+          image: italiaFlag
         },
         {
           id: 6,
           name: 'Denmark',
           href: 'shopname.com.dk',
-          image: require('~/assets/images/flags/dk.svg')
+          image: denmarkFlag
         },
         {
           id: 7,
           name: 'France',
           href: 'shopname.com.fr',
-          image: require('~/assets/images/flags/fr.svg')
+          image: franceFlag
         },
         {
           id: 8,
           name: 'Germany',
           href: 'shopname.com.ge',
-          image: require('~/assets/images/flags/ge.svg')
+          image: germanyFlag
         },
         {
           id: 9,
           name: 'China',
           href: 'shopname.cn',
-          image: require('~/assets/images/flags/cn.svg')
+          image: cninaFlag
         },
         {
           id: 10,
           name: 'Great Britain',
           href: 'shopname.co.uk',
-          image: require('~/assets/images/flags/gb.svg')
+          image: greatBritainFlag
         }
       ]
     }

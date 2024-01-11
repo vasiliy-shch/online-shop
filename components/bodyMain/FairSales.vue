@@ -7,61 +7,96 @@
       </div>
       <FairSalesCounter/>
     </div>
-      <div class="fairSales__cards">
-        <a class="fairSales__card"
-          v-for="card in saleCards"
-          :key="card.id"
-          :href="card.href"
-        >
+    <swiper
+      class="fairSales__cards"
+      :slidesPerView="2.5"
+      :breakpoints="breakpoints"
+      :modules="modules"
+      :pagination="{
+        clickable: true,
+      }"
+    >
+      <swiper-slide
+        v-for="card in saleCards"
+        :key="card.id"
+        :href="card.href"
+      >
+        <a class="fairSales__card">
           <img class="fairSales__cardImage" :src="card.image">
           <span class="fairSales__cardTitle">{{ card.name }}</span>
           <span class="fairSales__cardPercent"> -{{ card.sale }}% </span>
         </a>
-      </div>
+      </swiper-slide>
+    </swiper>
   </section>
 </template>
 
 <script>
 import FairSalesCounter from '~/components/bodyMain/FairSalesCounter.vue'
+import smartWatch from '~/assets/images/bodyMain/cards/smartWatch.svg'
+import laptops from '~/assets/images/bodyMain/cards/laptops.svg'
+import goProCameras from '~/assets/images/bodyMain/cards/goProCameras.svg'
+import gamingHeadphones from '~/assets/images/bodyMain/cards/gamingHeadphones.svg'
+import canonCameras from '~/assets/images/bodyMain/cards/canonCameras.svg'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Grid, Pagination } from 'swiper/modules';
 export default {
   components: {
     FairSalesCounter,
+    Swiper,
+    SwiperSlide
+  },
+  setup () {
+    return {
+      modules: [ Grid, Pagination ],
+    };
   },
   data () {
     return {
+      breakpoints: {
+        420: {
+          slidesPerView: 3,
+        },
+        560: {
+          slidesPerView: 4,
+        },
+        700: {
+         slidesPerView: 5,
+        }
+      },
       saleCards: [
         {
           id: 1,
           name: 'Smart watches',
-          image: require('~/assets/images/bodyMain/cards/smartWatch.svg'),
+          image: smartWatch,
           sale: 25,
           href: '#'
         },
         {
           id: 2,
           name: 'Laptops',
-          image: require('~/assets/images/bodyMain/cards/laptops.svg'),
+          image: laptops,
           sale: 15,
           href: '#'
         },
         {
           id: 3,
           name: 'GoPro cameras',
-          image: require('~/assets/images/bodyMain/cards/goProCameras.svg'),
+          image: goProCameras,
           sale: 40,
           href: '#'
         },
         {
           id: 4,
           name: 'Headphones',
-          image: require('~/assets/images/bodyMain/cards/gamingHeadphones.svg'),
+          image: gamingHeadphones,
           sale: 25,
           href: '#'
         },
         {
           id: 5,
           name: 'Canon cameras',
-          image: require('~/assets/images/bodyMain/cards/canonCameras.svg'),
+          image: canonCameras,
           sale: 25,
           href: '#'
         }
@@ -72,6 +107,9 @@ export default {
 </script>
 
 <style>
+@import 'swiper/css';
+@import 'swiper/css/grid';
+@import 'swiper/css/pagination';
 .fairSales {
   width: 1180px;
   height: 240px;
@@ -133,17 +171,16 @@ export default {
   }
 }
 .fairSales__cards {
-  display: grid;
-  grid-template-columns: repeat(5, 179px);
+  width: 100%;
+  height: 100%
 }
 @media screen and (max-width: 879px) {
   .fairSales__cards {
-    grid-template-columns: repeat(5, 140px);
     margin-top: 11px;
-    overflow-x: scroll;
   }
 }
 .fairSales__card {
+  height: 100%;
   font-family: 'Inter';
   display: flex;
   flex-direction: column;

@@ -15,6 +15,15 @@
 </template>
 
 <script>
+import tshirts from '~/assets/images/bodyMain/cards/t-shirts.svg'
+import jeansShorts from '~/assets/images/bodyMain/cards/jeansShorts.svg'
+import brownCoat from '~/assets/images/bodyMain/cards/brownCoat.svg'
+import jeansBag from '~/assets/images/bodyMain/cards/jeansBag.svg'
+import leatherWallet from '~/assets/images/bodyMain/cards/leatherWallet.svg'
+import goProCameras from '~/assets/images/bodyMain/cards/goProCameras.svg'
+import gamingHeadphones from '~/assets/images/bodyMain/cards/gamingHeadphones.svg'
+import smartWatch from '~/assets/images/bodyMain/cards/smartWatch.svg'
+import blueJacket from '~/assets/images/bodyMain/cards/blueJacket.svg'
 export default {
   data () {
     return {
@@ -22,7 +31,7 @@ export default {
         {
           id: 1,
           name: 'T-shirts with multiple colors, for men',
-          image: require('~/assets/images/bodyMain/cards/t-shirts.svg'),
+          image: tshirts,
           price: 10.30,
           description: '',
           href: '#'
@@ -30,7 +39,7 @@ export default {
         {
           id: 2,
           name: 'Jeans shorts for men blue color',
-          image: require('~/assets/images/bodyMain/cards/jeansShorts.svg'),
+          image: jeansShorts,
           price: 10.30,
           description: '',
           href: '#'
@@ -38,7 +47,7 @@ export default {
         {
           id: 3,
           name: 'Brown winter coat medium size',
-          image: require('~/assets/images/bodyMain/cards/brownCoat.svg'),
+          image: brownCoat,
           price: 12.50,
           description: '',
           href: '#'
@@ -46,7 +55,7 @@ export default {
         {
           id: 4,
           name: 'Jeans bag for travel for men',
-          image: require('~/assets/images/bodyMain/cards/jeansBag.svg'),
+          image: jeansBag,
           price: 34.00,
           description: '',
           href: '#'
@@ -54,7 +63,7 @@ export default {
         {
           id: 5,
           name: 'Leather wallet',
-          image: require('~/assets/images/bodyMain/cards/leatherWallet.svg'),
+          image: leatherWallet,
           price: 99.00,
           description: '',
           href: '#'
@@ -62,7 +71,7 @@ export default {
         {
           id: 6,
           name: 'Canon camera black, 100x zoom',
-          image: require('~/assets/images/bodyMain/cards/goProCameras.svg'),
+          image: goProCameras,
           price: 9.99,
           description: '',
           href: '#'
@@ -70,7 +79,7 @@ export default {
         {
           id: 7,
           name: 'Headset for gaming with mic',
-          image: require('~/assets/images/bodyMain/cards/gamingHeadphones.svg'),
+          image: gamingHeadphones,
           price: 8.99,
           description: '',
           href: '#'
@@ -78,7 +87,7 @@ export default {
         {
           id: 8,
           name: 'Smart watch silver color modern',
-          image: require('~/assets/images/bodyMain/cards/smartWatch.svg'),
+          image: smartWatch,
           price: 10.30,
           description: '',
           href: '#'
@@ -86,7 +95,7 @@ export default {
         {
           id: 9,
           name: 'Blue wallet for men leather metarfial',
-          image: require('~/assets/images/bodyMain/cards/blueJacket.svg'),
+          image: blueJacket,
           price: 10.30,
           description: '',
           href: '#'
@@ -94,7 +103,7 @@ export default {
         {
           id: 10,
           name: 'Smart Jeans bag for travel for men',
-          image: require('~/assets/images/bodyMain/cards/jeansBag.svg'),
+          image: jeansBag,
           price: 80.95,
           description: '',
           href: '#'
