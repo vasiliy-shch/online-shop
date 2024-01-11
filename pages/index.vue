@@ -4,7 +4,7 @@
     <BigBanner/>
     <FairSales/>
     <InvitingBlock :items="homeList" :bannerTitle="homeListTitle" :bannerImage="homeBannerImage"/>
-    <InvitingBlock :items="devicesList" :bannerTitle="devicesListTitle" :bannerImage="DevicesBannerImage"/>
+    <InvitingBlock :items="devicesList" :bannerTitle="devicesListTitle" :bannerImage="devicesBannerImage"/>
     <BigForm/>
     <RecommendedItems/>
     <ExtraServices/>

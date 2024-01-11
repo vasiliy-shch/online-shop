@@ -127,7 +127,7 @@ export default {
   .bigBanner {
     width: 100%;
     height: 180px;
-    margin: 17px auto 0;
+    margin: 14px auto 0;
     border: none;
   }
 }

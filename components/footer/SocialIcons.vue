@@ -20,27 +20,27 @@ export default {
       icons: [
         {
           id: 1,
-          url: require('~/assets/images/footerSocialIcons/facebook.svg'),
+          url: import('~/assets/images/footerSocialIcons/facebook.svg'),
           href: 'https://www.facebook.com/?locale=ru_RU'
         },
         {
           id: 2,
-          url: require('~/assets/images/footerSocialIcons/twitter.svg'),
+          url: import('~/assets/images/footerSocialIcons/twitter.svg'),
           href: 'https://twitter.com/?lang=ru'
         },
         {
           id: 3,
-          url: require('~/assets/images/footerSocialIcons/linkedin.svg'),
+          url: import('~/assets/images/footerSocialIcons/linkedin.svg'),
           href: 'https://ru.linkedin.com/'
         },
         {
           id: 4,
-          url: require('~/assets/images/footerSocialIcons/instagram.svg'),
+          url: import('~/assets/images/footerSocialIcons/instagram.svg'),
           href: 'https://www.instagram.com/'
         },
         {
           id: 5,
-          url: require('~/assets/images/footerSocialIcons/youtube.svg'),
+          url: import('~/assets/images/footerSocialIcons/youtube.svg'),
           href: 'https://www.youtube.com/?gl=RU&hl=ru'
         }
       ]

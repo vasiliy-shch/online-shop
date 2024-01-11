@@ -110,6 +110,7 @@ export default {
     font-size: 16px;
     font-family: 'Inter';
     display: flex;
+    position:relative;
     cursor: pointer;
 }
 .header__language {
@@ -128,7 +129,8 @@ export default {
 }
 .header__language_list {
   border: 1px solid #EFF2F4;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  background-color: white;
 }
 .header__languageInList {
   height: 36px;

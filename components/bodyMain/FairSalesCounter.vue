@@ -38,7 +38,7 @@ export default {
   methods: {
     countDown () {
       const dateNow = new Date()
-      const dateEnd = new Date('12.31.2023 00:00:00')
+      const dateEnd = new Date('12.31.2024 00:00:00')
       this.allDate = Math.floor((dateEnd.getTime() - dateNow.getTime()) / 1000)
       let dateLeft = this.allDate
       let dateTemp = 0

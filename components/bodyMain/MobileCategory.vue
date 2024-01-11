@@ -1,20 +1,41 @@
 <template>
-  <div class="mobileCategories">
-    <a
-    class="mobileCategory"
-    v-for="category in categories"
-    :href="category.href"
-    :key="category.id"
+  <swiper 
+    class="mobileCategories"
+    :slidesPerView="3.5"
+    :breakpoints="breakpoints"
+    :slideShadows="true"
+  >
+    <swiper-slide 
+      v-for="category in categories"
+      :key="category.id"
     >
-      <span class="mobileCategory__title">{{ category.name }}</span>
-    </a>
-  </div>
+      <a
+        class="mobileCategory"
+        :href="category.href"
+      >
+        <span class="mobileCategory__title">{{ category.name }}</span>
+      </a>
+    </swiper-slide>
+  </swiper>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
 export default {
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   data () {
     return {
+      breakpoints: {
+        480: {
+          slidesPerView: 4.5
+        },
+        600: {
+          slidesPerView: 6
+        },
+      },
       categories: [
         {
           id: 1,
@@ -53,6 +74,7 @@ export default {
 </script>
 
 <style>
+@import 'swiper/css';
 .mobileCategories {
   display: none;
 }
@@ -60,10 +82,9 @@ export default {
   .mobileCategories {
     font-family: 'Inter';
     display: flex;
-    height: 36px;
+    height: 40px;
     margin: 16px 0 0 16px;
     max-width: 879px;
-    overflow-x: scroll;
   }
 }
 .mobileCategory {

@@ -29,6 +29,14 @@
 </template>
 
 <script>
+import firstImage from '~/assets/images/bodyMain/extraServices/firstImage.svg'
+import serchIcon from '~/assets/images/bodyMain/extraServices/serch.svg'
+import secondImage from '~/assets/images/bodyMain/extraServices/secondImage.svg'
+import boxIcon from '~/assets/images/bodyMain/extraServices/box.svg'
+import thirdImage from '~/assets/images/bodyMain/extraServices/thirdImage.svg'
+import shipIcon from '~/assets/images/bodyMain/extraServices/ship.svg'
+import fourthImage from '~/assets/images/bodyMain/extraServices/fourthImage.svg'
+import shieldIcon from '~/assets/images/bodyMain/extraServices/shield.svg'
 export default {
   data () {
     return {
@@ -36,29 +44,29 @@ export default {
         {
           id: 1,
           description: 'Source from Industry Hubs',
-          image: require('~/assets/images/bodyMain/extraServices/firstImage.svg'),
-          icon: require('~/assets/images/bodyMain/extraServices/serch.svg'),
+          image: firstImage,
+          icon: serchIcon,
           href: '#'
         },
         {
           id: 2,
           description: 'Customize Your Products',
-          image: require('~/assets/images/bodyMain/extraServices/secondImage.svg'),
-          icon: require('~/assets/images/bodyMain/extraServices/box.svg'),
+          image: secondImage,
+          icon: boxIcon,
           href: '#'
         },
         {
           id: 3,
           description: 'Fast, reliable shipping by ocean or air',
-          image: require('~/assets/images/bodyMain/extraServices/thirdImage.svg'),
-          icon: require('~/assets/images/bodyMain/extraServices/ship.svg'),
+          image: thirdImage,
+          icon: shipIcon,
           href: '#'
         },
         {
           id: 4,
           description: 'Product monitoring and inspection',
-          image: require('~/assets/images/bodyMain/extraServices/fourthImage.svg'),
-          icon: require('~/assets/images/bodyMain/extraServices/shield.svg'),
+          image: fourthImage,
+          icon: shieldIcon,
           href: '#'
         }
       ]

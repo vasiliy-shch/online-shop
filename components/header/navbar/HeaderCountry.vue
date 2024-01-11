@@ -37,74 +37,84 @@
 </template>
 
 <script>
+import russiaFlag from '~/assets/images/flags/ru.svg'
+import usaFlag from '~/assets/images/flags/us.svg'
+import italiaFlag from '~/assets/images/flags/it.svg'
+import germanyFlag from '~/assets/images/flags/ge.svg'
+import greatBritainFlag from '~/assets/images/flags/gb.svg'
+import franceFlag from '~/assets/images/flags/fr.svg'
+import denmarkFlag from '~/assets/images/flags/dk.svg'
+import cninaFlag from '~/assets/images/flags/cn.svg'
+import australiaFlag from '~/assets/images/flags/au.svg'
+import emiratesFlag from '~/assets/images/flags/ae.svg'
 export default {
   data () {
     return {
       isEdit: false,
       selectedCountry: {
         id: 1,
-        url: require('~/assets/images/flags/ru.svg')
+        url: russiaFlag
       },
       countries: [
         {
           id: 1,
           name: 'Russia',
           styles: 'ship__country_selected',
-          url: require('~/assets/images/flags/ru.svg')
+          url: russiaFlag
         },
         {
           id: 2,
           name: 'US of America',
           styles: '',
-          url: require('~/assets/images/flags/us.svg')
+          url: usaFlag
         },
         {
           id: 3,
           name: 'Italia',
           styles: '',
-          url: require('~/assets/images/flags/it.svg')
+          url: italiaFlag
         },
         {
           id: 4,
           name: 'Germany',
           styles: '',
-          url: require('~/assets/images/flags/ge.svg')
+          url: germanyFlag
         },
         {
           id: 5,
           name: 'Great Britain',
           styles: '',
-          url: require('~/assets/images/flags/gb.svg')
+          url: greatBritainFlag
         },
         {
           id: 6,
           name: 'France',
           styles: '',
-          url: require('~/assets/images/flags/fr.svg')
+          url: franceFlag
         },
         {
           id: 7,
           name: 'Denmark',
           styles: '',
-          url: require('~/assets/images/flags/dk.svg')
+          url: denmarkFlag
         },
         {
           id: 8,
           name: 'China',
           styles: '',
-          url: require('~/assets/images/flags/cn.svg')
+          url: cninaFlag
         },
         {
           id: 9,
           name: 'Australia',
           styles: '',
-          url: require('~/assets/images/flags/au.svg')
+          url: australiaFlag
         },
         {
           id: 10,
           name: 'United Emirates',
           styles: 'ship__country_borderBottom',
-          url: require('~/assets/images/flags/ae.svg')
+          url: emiratesFlag
         }
       ]
     }
@@ -128,11 +138,15 @@ export default {
 .header__ship_country {
   width: 115px;
   margin-left: 26px;
+  position: relative;
 }
 .ship__country_list {
+  position: relative;
+  background-color: white;
   border: 1px solid #EFF2F4;
   width: 200px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  z-index: 1;
 }
 .ship__country {
   display: flex;

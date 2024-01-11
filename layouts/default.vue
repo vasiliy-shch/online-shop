@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrapper">
     <HeaderShop/>
-    <Nuxt/>
+    <slot/>
     <FooterShop/>
   </div>
 </template>
@@ -18,7 +18,6 @@ export default {
 </script>
 
 <style>
-@import '~/assets/css/fonts_family/Inter-Font.css';
 .main-wrapper {
   max-width: 1440px;
   margin: 0 auto;

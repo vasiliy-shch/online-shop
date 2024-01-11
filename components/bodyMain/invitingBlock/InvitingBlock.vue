@@ -7,26 +7,38 @@
         <button class="invitingBlock__bannerButton">
           <a class="invitingBlock__bannerButton_text" href="#">Source now</a>
         </button>
-        {{ bannerImage }}
       </div>
     </div>
-    <div class="invitingBlock__cards">
-      <a
+    <swiper
+      class="invitingBlock__cards"
+      :slidesPerView="2.5"
+      :breakpoints="breakpoints"
+      :pagination="{
+        clickable: true,
+      }"
+      :modules="modules"
+      :grid="{
+        rows: 1,
+        fill: 'column'
+      }"
+    >
+      <swiper-slide
         v-for="card in items"
         :key="card.id"
-        :class="['invitingBlock__card', card.id > 4 ?
-          'invitingBlock__card_borderTop' : '']"
       >
-        <div class="invitingBlock__textBlock">
-          <h3 class="invitingBlock__cardTitle">{{ card.name }}</h3>
-          <span class="invitingBlock__cardSubtitle">
-            <span> from&nbsp; </span>
-            <span> USD {{ card.price }}</span>
-          </span>
-        </div>
-        <img class="invitingBlock__cardImage" :src="card.image">
-      </a>
-    </div>
+        <a :class="['invitingBlock__card', card.id > 4 ?
+          'invitingBlock__card_borderTop' : '']">
+          <div class="invitingBlock__textBlock">
+            <h3 class="invitingBlock__cardTitle">{{ card.name }}</h3>
+            <span class="invitingBlock__cardSubtitle">
+              <span> from&nbsp; </span>
+              <span> USD {{ card.price }}</span>
+            </span>
+          </div>
+          <img class="invitingBlock__cardImage" :src="card.image">
+        </a>
+      </swiper-slide>
+    </swiper>
     <a class="invitingBlock__mobileLink" href="#">
       <button class="invitingBlock__mobileLink_button">
         Source now
@@ -37,22 +49,76 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Grid, Pagination } from 'swiper/modules';
 export default {
   props: {
     items: Array,
     bannerTitle: String,
     bannerImage: String
+  },
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  setup () {
+    return {
+      modules: [ Grid, Pagination ],
+    };
+  },
+  data () {
+    return {
+      breakpoints: {
+        360: {
+          slidesPerView: 2.5,
+          grid: {
+            rows: 1,
+            fill: 'column'
+          }
+        },
+        420: {
+          slidesPerView: 3,
+          grid: {
+            rows: 1,
+            fill: 'column'
+          }
+        },
+        560: {
+          slidesPerView: 4,
+          grid: {
+            rows: 1,
+            fill: 'column'
+          }
+        },
+        750: {
+          slidesPerView: 5,
+          grid: {
+            rows: 1,
+            fill: 'column'
+          }
+        },
+        879: {
+          slidesPerView: 4,
+          grid: {
+            rows: 2,
+            fill: 'row'
+          }
+        }
+      }
+    }
   }
 }
 </script>
 
 <style>
+@import 'swiper/css';
+@import 'swiper/css/grid';
+@import 'swiper/css/pagination';
 .invitingBlock {
   width: 1180px;
   height: 257px;
   display: grid;
   grid-template-columns: 280px auto;
-  grid-auto-rows: 128.5px;
   background-color: white;
   margin: 20px auto 0;
   border: 1px solid #E0E0E0;
@@ -71,15 +137,11 @@ export default {
   }
 }
 .invitingBlock__banner {
-  grid-row-start: 1;
-  grid-row-end: 3;
   display: flex;
   position: relative;
 }
 @media screen and (max-width: 879px) {
   .invitingBlock__banner {
-    grid-row-start: 1;
-    grid-row-end: 2;
     background-color: white;
     background-image: none;
   }
@@ -115,6 +177,11 @@ export default {
   left: 0;
   z-index: 0;
 }
+@media screen and (max-width: 879px) {
+  .invitingBlock__bannerImage {
+    display: none
+  }
+}
 .invitingBlock__bannerButton {
   font-size: 16px;
   line-height: 19px;
@@ -138,20 +205,17 @@ export default {
   color: black;
 }
 .invitingBlock__cards {
-  display: grid;
-  grid-template-columns: repeat(4, 223px);
+  width: 100%;
 }
 @media screen and (max-width: 879px) {
   .invitingBlock__cards {
-    grid-template-columns: repeat(8, 140px);
-    grid-template-rows: 160px;
     border-top: 1px solid #E0E0E0;
     border-bottom: 1px solid #E0E0E0;
-    overflow-x: scroll;
   }
 }
 .invitingBlock__card {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   border-left: 1px solid #E0E0E0;
   cursor: pointer;
